@@ -26,7 +26,7 @@ def get_images_from_folder(folder_path, extensions=None):
 
 def format_three_16x9(image_paths, output_path):
     """
-    Resize 3 images to width 2584px, create a white background of 2584px x 4603px,
+    Resize 3 images to width 3007px, create a white background of 3007px x 5357px,
     and place the images vertically with the first image at the top,
     the second centered, and the third at the bottom.
 
@@ -39,8 +39,8 @@ def format_three_16x9(image_paths, output_path):
         raise ValueError("Exactly three image paths are required.")
 
     # Define background dimensions
-    bg_width = 2584
-    bg_height = 4603
+    bg_width = 3007
+    bg_height = 5357
     background = Image.new("RGB", (bg_width, bg_height), "white")
 
     # Open images and resize them to width 2584px
