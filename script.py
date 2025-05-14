@@ -48,7 +48,7 @@ def format_three_16x9(image_paths, output_path):
     for image_path in image_paths:
         img = Image.open(image_path)
         aspect_ratio = img.height / img.width
-        new_width = bg_width
+        new_width = int(bg_width * 1.03)
         new_height = int(new_width * aspect_ratio)
         resized_img = img.resize((new_width, new_height), Image.Resampling.LANCZOS)
         images.append(resized_img)
